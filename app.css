@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+*{
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box; 
+}
+
+:root{
+    --primaryBackground: #212222;
+    --secondaryBackground: #2f3030;
+    --primaryColor: #e0a80d;
+    --greyDark: #7d8792;
+    --headingColor: #2d2e2e;
+    --white: #fff;
+    --black: #000;
+    --silver: #bac8d3;
+}
+
+body{
+    background: var(--headingColor);
+    color: var(--white);
+    font-family: "Poppins" , sans-serif;
+}
+
+a{
+    color: var(--greyDark);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover{
+    color: var(--primaryColor);
+}
+
+p{
+    color: var(--silver);
+    font-size: 15px;
+    line-height: 30px;
+    margin: 20px 0;
+} 
+
+h1,h2,h3,h4,h5,h6{
+   font-weight: 400;
+}
+
+.container{
+    max-width: 80%;
+    margin: auto;
+}
+
+.flexsb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 17px;
+    background-color: var(--primaryColor);
+    color: var(--white);
+    padding: 15px 50px;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+/* ......................................header........................................ */
+      
+ header{
+    background: var(--headingColor);
+    height: 10vh;
+    line-height: 10vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+ }
+
+ header a{
+    margin-left: 40px;
+ }
+       
+
+ .toggle{
+    cursor: pointer;
+    color: var(--white);
+    display: none;
+ }
+      
+
+ @media screen  and (max-width: 768px) {
+    header .nav{
+        display: none;
+    }
+
+    header a{
+        width: 100%;
+        display: block;
+        color: var(--white);
+    }
+
+    .toggle{
+        display: block;
+        background: none;
+        font-size: 25px;
+    }
+
+    .hideMenu{
+        display: none;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background: var(--headingColor);
+    }
+ }
+
+ .primaryBtn{
+    background: none;
+    border: 2px solid var(--primaryColor);
+ }
+       
+
+
+/* ......................................header........................................ */
+
+section{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+}
+/* ......................................hero........................................ */
+
+   .hero{
+    position: relative;
+   }
+
+   .hero ::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url(./img/exptn1.png);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 90vh;
+   }
+
+   .hero-container{
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+   }
+
+
+   .hero h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--primaryColor);
+   }
+/* ......................................hero........................................ */
+
+.heading{
+    font-size: 20px;
+    color: var(--primaryColor);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* ......................................about........................................ */
+
+
+.about .primaryBtn{
+    margin-left: 20px;
+}
+
+.about .container{
+    gap: 50px;
+}
+
+.about .container img{
+    width: 20rem;
+}
+
+.about h2{
+    text-align: left;
+    margin: 0;
+}
+
+.left{
+    width: 35%;
+}
+
+.right{
+    width: 65%;
+}
+/* ......................................about........................................ */
+
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.container h2{
+    color: var(--primaryColor);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* ......................................services........................................ */
+
+
+
+.services .box{
+    background-color: var(--primaryBackground);
+    padding: 35px;
+    padding-bottom: 20px;
+}
+
+.services h3{
+    margin-top: 20px;
+}
+
+
+
+/* ......................................services........................................ */
+
+.counter img{
+    width: 30px;
+}
+
+.grid4{
+    grid-template-columns: repeat(4, 1fr);
+    height: 50vh;
+    place-items: center;
+    text-align: center;
+}
+
+/* ......................................counter........................................ */
+.counter{
+    margin-top: 20rem;
+    position: relative;
+}
+
+.hero.counter ::after{
+    background-image: url(./img/exptn1.png);
+    height: 50vh;
+}
+
+.counter h1{
+    margin: 0;
+}
+
+
+
+
+/* ......................................counter........................................ */
+/* ......................................article........................................ */
+article{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+article .img img{
+    width: 100%;
+    height: 100%;
+}
+
+article .box{
+    position: relative;
+    transition: 0.5s;
+}
+
+#showBox{
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+#showBox .show{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+#showBox .show .port-img{
+    width: 14rem;
+}
+
+#showBox::-webkit-scrollbar{
+    display: none;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 20.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.overlay::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primaryColor);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.overlay img{
+    width: 20px;
+
+}
+
+article .box:hover .overlay,
+article .box:hover .overlay::after{
+    opacity: 1;
+}
+
+.catButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.catButton button{
+    text-transform: capitalize;
+    margin: 0 10px;
+}
+/* ......................................article........................................ */
+/* ......................................testimonial........................................ */
+.testimonials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.testimonials::after{
+    background: url(./img/exptn1.png);
+}
+
+.testimonials .box{
+    max-width: 60%;
+    margin: auto;
+}
+
+.testimonials i{
+    background: var(--white);
+    font-size: 20px;
+    padding: 15px;
+    margin: 30px 0px;
+    display: inline-block;
+    color: var(--primaryColor);
+}
+
+
+.testimonials .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid var(--primaryColor);
+}
+
+.testimonials img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    object-fit: cover;
+}
+label{
+    color: var(--primaryColor);
+    margin: 10px 0;
+    display: inline-block;
+}
+
+
+.answer-box{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+
+.answer .box{
+    width: 55rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.test-box{
+  display: flex;
+}
+
+.container #nextBtn , #backBtn{
+  height: 47px;
+  background: var(--white);
+  color: var(--black);
+  margin-top: 14rem;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.answer-box::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+/* ......................................testimonial........................................ */
